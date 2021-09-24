@@ -8,13 +8,13 @@ const songsReducer = () => [
 ];
 
 const selectedSongReducer = (selectedSong = null, action) => {
-  if (action === 'SONG_SELECTED') {
+  if (action.type === 'SONG_SELECTED') {
     return action.payload;
   }
   return selectedSong;
 };
 
-const favoriteSongReducer = (favoriteSong = 'All Star', action) => {
+const favoriteSongReducer = (favoriteSong = null, action) => {
   if (action.type === 'FAVORITE_SELECTED') { return action.payload; }
   return favoriteSong;
 };
